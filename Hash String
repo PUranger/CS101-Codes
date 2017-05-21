@@ -1,0 +1,5 @@
+def hash_string(keyword, buckets):
+	h = 0
+	for e in keyword:
+		h = (h + ord(e)) % buckets
+	return h
