@@ -22,7 +22,7 @@ def make_hashtable(nbuckets):
     return tab
 
 
-def hash_string(keyword, buckets):
+def hash_string(keyword, buckets):       # hash_string returns the bucket corresponding to the keyword
     h = 0
     for e in keyword:
         h = (h+ord(e)) % buckets
@@ -30,7 +30,7 @@ def hash_string(keyword, buckets):
 
 
 def hashtable_get_bucket(htable, key):
-    return htable[hash_string(key, len(htable))]
+    return htable[hash_string(key, len(htable))]    # return htable[n] which returns the n+1 th entry of htable 
 
 
 def hashtable_add(htable, key, value):
